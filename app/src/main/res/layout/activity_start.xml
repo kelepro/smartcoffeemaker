@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="161dp">
+
+
+            <CheckBox
+                android:id="@+id/checkboxLED1"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="62dp"
+                android:layout_marginTop="12dp"
+                android:checked="false"
+                android:scaleX="1.7"
+                android:scaleY="1.7"
+                android:text="On/Off"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/esp_image"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="27dp"
+                android:layout_marginStart="18dp"
+                app:srcCompat="@drawable/intense" />
+
+            <ImageView
+                android:id="@+id/crea_image"
+                android:layout_width="96dp"
+                android:layout_height="81dp"
+                android:layout_alignTop="@+id/esp_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-1dp"
+                app:srcCompat="@drawable/crem" />
+
+            <ImageView
+                android:id="@+id/fil_image"
+                android:layout_width="92dp"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/esp_image"
+                android:layout_marginEnd="18dp"
+                app:srcCompat="@drawable/intense2" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/esp_image"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="-27dp"
+                android:text="Espresso"
+                android:textStyle="bold"
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/esp_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-27dp"
+                android:text="Cream or Tea"
+                android:textStyle="bold"
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/esp_image"
+                android:layout_marginEnd="48dp"
+                android:layout_marginTop="-27dp"
+                android:text="Filter"
+                android:textStyle="bold"
+                android:textColor="#000"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="RX:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/readBuffer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="0.9"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="&lt;Read Buffer>" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Status:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bluetoothStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignTop="@+id/checkboxLED1"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="0.9"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="&lt;Bluetooth Status>" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="2dp"
+            android:layout_toStartOf="@+id/off"
+            android:background="@color/colorPrimaryDark"
+            android:text="Bluetooth ON"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/off"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/scan"
+            android:layout_marginBottom="2dp"
+            android:layout_toEndOf="@+id/PairedBtn"
+            android:layout_toRightOf="@+id/PairedBtn"
+            android:background="@color/colorPrimaryDark"
+            android:text="Bluetooth OFF"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/PairedBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scan"
+            android:layout_marginBottom="2dp"
+            android:layout_toStartOf="@+id/discover"
+            android:background="@color/colorPrimaryDark"
+            android:text="Show paired Devices"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/discover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/off"
+            android:layout_marginBottom="2dp"
+            android:layout_toEndOf="@+id/checkboxLED1"
+            android:layout_toRightOf="@+id/checkboxLED1"
+            android:background="@color/colorPrimaryDark"
+            android:text="Discover New Devices"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"/>
+
+        <ListView
+            android:id="@+id/devicesListView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@+id/off"
+            android:layout_alignRight="@+id/off"
+            android:layout_below="@+id/PairedBtn"
+            android:choiceMode="singleChoice"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
